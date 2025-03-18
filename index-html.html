@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond Sourdough</title>
+  <style>
+    :root {
+      --primary-color: #8B5A2B;
+      --secondary-color: #F5DEB3;
+      --accent-color: #D2691E;
+      --text-color: #4A4A4A;
+      --light-bg: #FFF8E7;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: var(--light-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    
+    nav {
+      background-color: var(--secondary-color);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav a {
+      color: var(--primary-color);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav a:hover {
+      color: var(--accent-color);
+    }
+    
+    .hero {
+      height: 400px;
+      background-color: #D9C9BA;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+    
+    .btn:hover {
+      background-color: var(--accent-color);
+    }
+    
+    .features {
+      padding: 4rem 2rem;
+      background-color: white;
+    }
+    
+    .features h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--primary-color);
+    }
+    
+    .features-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    
+    .feature-card {
+      flex: 1 1 300px;
+      max-width: 350px;
+      padding: 2rem;
+      border-radius: 8px;
+      background-color: var(--light-bg);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .feature-card h3 {
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+    
+    .recipes {
+      padding: 4rem 2rem;
+      background-color: var(--secondary-color);
+    }
+    
+    .recipes h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--primary-color);
+    }
+    
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .recipe-card {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .recipe-image {
+      height: 200px;
+      background-color: #D9C9BA;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+    
+    .recipe-content {
+      padding: 1.5rem;
+    }
+    
+    .recipe-content h3 {
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+    
+    .recipe-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    
+    .newsletter {
+      padding: 4rem 2rem;
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+    }
+    
+    .newsletter h2 {
+      margin-bottom: 1rem;
+    }
+    
+    .newsletter p {
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .newsletter-form input {
+      flex: 1;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 4px 0 0 4px;
+    }
+    
+    .newsletter-form button {
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 0 1.5rem;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+    
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .social-links {
+      margin-bottom: 1rem;
+    }
+    
+    .social-links a {
+      color: white;
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .hero {
+        height: auto;
+      }
+      
+      .newsletter-form {
+        flex-direction: column;
+      }
+      
+      .newsletter-form input {
+        border-radius: 4px;
+        margin-bottom: 1rem;
+      }
+      
+      .newsletter-form button {
+        border-radius: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Beyond Sourdough</h1>
+    <p>My journey to better health through fermentation</p>
+  </header>
+  
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#health">Health Benefits</a>
+    <a href="#recipes">Recipes</a>
+    <a href="#fermentation">Fermentation Projects</a>
+    <a href="#diabetes">Managing Diabetes</a>
+    <a href="#blog">My Journey</a>
+  </nav>
+  
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Transforming Health Through Fermentation</h1>
+      <p>My personal journey of using sourdough bread and fermented foods to fight Type 2 diabetes and improve overall wellbeing.</p>
+      <a href="#health" class="btn">Discover Health Benefits</a>
+    </div>
+  </section>
+  
+  <section class="features" id="health">
+    <h2>Health Benefits of Fermentation</h2>
+    <div class="features-container">
+      <div class="feature-card">
+        <h3>Blood Sugar Management</h3>
+        <p>Fermented foods like sourdough bread have a lower glycemic index, helping to manage blood sugar levels and support those with Type 2 diabetes.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Gut Microbiome</h3>
+        <p>Lacto-fermented foods such as kombucha and fermented vegetables contribute beneficial bacteria that support digestive health and immune function.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Nutrient Absorption</h3>
+        <p>Fermentation breaks down anti-nutrients like phytic acid, increasing the bioavailability of minerals and making food more nutritious and digestible.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="recipes" id="recipes">
+    <h2>Health-Focused Recipes</h2>
+    <div class="recipe-grid">
+      <div class="recipe-card">
+        <div class="recipe-image">Low-GI Sourdough Loaf</div>
+        <div class="recipe-content">
+          <h3>Low-GI Sourdough Loaf</h3>
+          <div class="recipe-meta">
+            <span>Diabetes-Friendly</span>
+            <span>Time: 24 hours</span>
+          </div>
+          <p>My go-to bread recipe with a longer fermentation time to reduce glycemic impact and improve digestibility.</p>
+          <a href="#" class="btn">View Recipe</a>
+        </div>
+      </div>
+      <div class="recipe-card">
+        <div class="recipe-image">Probiotic Kombucha</div>
+        <div class="recipe-content">
+          <h3>Homemade Kombucha</h3>
+          <div class="recipe-meta">
+            <span>Gut Health</span>
+            <span>Time: 7-14 days</span>
+          </div>
+          <p>A simple guide to brewing your own probiotic-rich kombucha at home with flavor variations and health benefits.</p>
+          <a href="#" class="btn">View Recipe</a>
+        </div>
+      </div>
+      <div class="recipe-card">
+        <div class="recipe-image">Fermented Vegetables</div>
+        <div class="recipe-content">
+          <h3>Lacto-Fermented Vegetables</h3>
+          <div class="recipe-meta">
+            <span>Beginner-Friendly</span>
+            <span>Time: 3-7 days</span>
+          </div>
+          <p>Easy recipes for fermenting carrots, onions, and other vegetables to enhance nutrition and support gut health.</p>
+          <a href="#" class="btn">View Recipe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="features" id="fermentation">
+    <h2>My Fermentation Projects</h2>
+    <div class="features-container">
+      <div class="feature-card">
+        <h3>Sourdough Starter</h3>
+        <p>How I maintain my starter and use it for various baking projects beyond just bread, including pancakes, muffins, and more.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Kombucha Brewing</h3>
+        <p>My setup for continuous brewing kombucha at home, flavor experiments, and the health benefits I've experienced.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Vegetable Fermentation</h3>
+        <p>Simple techniques for fermenting onions, carrots, and other vegetables to create probiotic-rich side dishes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="diabetes" class="newsletter">
+    <h2>My Diabetes Management Journey</h2>
+    <p>How fermented foods became part of my strategy to fight Type 2 diabetes, improve my health metrics, and enhance my quality of life. Follow along as I share my personal experiences and the science behind it.</p>
+    <a href="#blog" class="btn">Read My Story</a>
+  </section>
+  
+  <section class="recipes" id="blog">
+    <h2>My Fermentation Journey</h2>
+    <div class="recipe-grid">
+      <div class="recipe-card">
+        <div class="recipe-image">Getting Started</div>
+        <div class="recipe-content">
+          <h3>How Fermentation Changed My Health</h3>
+          <div class="recipe-meta">
+            <span>Personal Story</span>
+            <span>Health Focus</span>
+          </div>
+          <p>My diagnosis with Type 2 diabetes and how discovering fermented foods put me on a path to better health.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+      <div class="recipe-card">
+        <div class="recipe-image">Progress Updates</div>
+        <div class="recipe-content">
+          <h3>My Health Improvements</h3>
+          <div class="recipe-meta">
+            <span>Blood Sugar</span>
+            <span>Gut Health</span>
+          </div>
+          <p>Tracking the positive changes in my health metrics since incorporating fermented foods into my diet.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+      <div class="recipe-card">
+        <div class="recipe-image">Future Plans</div>
+        <div class="recipe-content">
+          <h3>Expanding My Fermentation Projects</h3>
+          <div class="recipe-meta">
+            <span>New Projects</span>
+            <span>Health Goals</span>
+          </div>
+          <p>What's next in my fermentation journey and how I plan to continue improving my health through food.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-links">
+      <a href="#">Instagram</a>
+      <a href="#">Pinterest</a>
+      <a href="#">YouTube</a>
+    </div>
+    <p>&copy; 2025 Beyond Sourdough. All rights reserved.</p>
+  </footer>
+</body>
+</html>
