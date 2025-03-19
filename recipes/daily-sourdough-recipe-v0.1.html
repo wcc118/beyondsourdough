@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Sourdough Bread Recipe | Beyond Sourdough</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f8f4;
+        }
+        h1, h2, h3 {
+            color: #5d4037;
+            border-bottom: 2px solid #8d6e63;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h2 {
+            border-left: 4px solid #a1887f;
+            padding-left: 10px;
+            border-bottom: none;
+        }
+        ul, ol {
+            margin-left: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .note {
+            font-style: italic;
+            background-color: #fff3e0;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .recipe-intro {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        .ingredients-list {
+            background-color: #f5f5f5;
+            padding: 15px 25px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+        }
+        .ingredient-row {
+            display: flex;
+            margin-bottom: 8px;
+        }
+        .ingredient-amount {
+            width: 90px;
+            font-weight: bold;
+        }
+        .print-button {
+            background-color: #6d4c41;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .print-button:hover {
+            background-color: #5d4037;
+        }
+        .recipe-meta {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .recipe-meta span {
+            background: #f5f5f5;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+            .print-button {
+                display: none;
+            }
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .recipe-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Sourdough Bread Recipe</h1>
+        <p class="recipe-meta">
+            <span>Version 0.1</span>
+            <span>Prep time: 24 hours</span>
+            <span>Makes 2 loaves</span>
+        </p>
+        
+        <div class="recipe-intro">
+            <p>Tartine inspired everyday sourdough loaf, this is my go-to recipe. Two loaves at a time, it's a forgiving recipe that can take a strong robust starter or an 18-24 hour ripe to overripe starter.</p>
+            
+            <p>The key though is my secret ingredient which I discovered as a result of wandering YouTube videos. Japan is renowned if not well known for their bread bakeries. A technique they employ involves the use of raisin yeast water. Separate recipe to be posted soon, this ingredient is an optional replacement for the water 2, however, what it does to neutralize any sourness in the resulting bread is incredible as it provides a semi-sweet depth that is simply <em>"je ne sais que"</em> how to describe, you just have to taste it and I can promise you, no one is making bread like this.</p>
+            
+            <p>I'm sharing because bread should be open source and available to everyone given that it has existed for thousands of years.</p>
+            
+            <div class="note">
+                <p>In the near term, based on feedback I've received recently, I'm experimenting with the salt content. Specifically, increasing, however, this requires a subsequent increase in starter and thus reduction in flour/water mix which I have not yet nailed down.</p>
+            </div>
+        </div>
+        
+        <h2>Ingredients</h2>
+        <div class="ingredients-list">
+            <div class="ingredient-row">
+                <div class="ingredient-amount">200g</div>
+                <div>Starter / levain</div>
+            </div>
+            <div class="ingredient-row">
+                <div class="ingredient-amount">700g</div>
+                <div>Water 1, filtered, room temp</div>
+            </div>
+            <div class="ingredient-row">
+                <div class="ingredient-amount">700g</div>
+                <div>Bread flour, 12.7% minimum protein</div>
+            </div>
+            <div class="ingredient-row">
+                <div class="ingredient-amount">250g</div>
+                <div>Wheat flour, stone ground preferably</div>
+            </div>
+            <div class="ingredient-row">
+                <div class="ingredient-amount">50g</div>
+                <div>Rye flour</div>
+            </div>
+            <div class="ingredient-row">
+                <div class="ingredient-amount">65g</div>
+                <div>Water 2, filtered, room temp -and/or- raisin yeast water</div>
+            </div>
+            <div class="ingredient-row">
+                <div class="ingredient-amount">20g</div>
+                <div>Salt</div>
+            </div>
+        </div>
+        
+        <h2>Levain / Starter</h2>
+        <p>Mix 50g of your starter with 50g wheat flour, 50g bread flour, and 100g water, filtered, room temperature. Do this 6-18 hours before you plan to mix your dough.</p>
+        <p>For more advanced flavor control, increase the ratio of flour/water to starter and reduce the time for a sweeter bread flavor; for more developed flavor, stick to 2:1 and wait to mix until levain has fully risen and remained for at least 2 hours.</p>
+        
+        <h2>Autolyse</h2>
+        <p>Begin with the autolyse, mixing the water 1, bread flour, wheat flour, and rye flour. Mix until nearly all flour is incorporated into a shaggy mass. Cover and rest for (min) 15 minutes to (max) 60 minutes, depending on your schedule.</p>
+        <p>60 minutes is preferred, but sometimes schedule takes precedence and 15 minutes is better than none at all. Record your dough temperature with a thermometer. Note the temperature of your cooking space as well.</p>
+        
+        <h2>Mix</h2>
+        <p>To the bowl with the autolyse, add the starter, water 2, and salt and mix until well incorporated into a single mass. Working the dough at this point, while not a requirement, as you develop your skills I highly recommend.</p>
+        <p>While there are many techniques available, the fastest and cleanest approach I've used is a gravity based stretching motion where you lift the dough by grabbing a large mass of it out of the bowl and give it a gentle shake to stretch and actively form the gluten network and strength. Shake up until it starts to descend under its own weight just to the point of starting to tear and replace in the bowl. Twist, and grab a new section and repeat.</p>
+        <p>Continue repeating this action until you get to the point where the dough no longer lifts off the bowl completely when grabbing with a single hand. Again, this is optional, but developing the structure of the gluten at this stage is what separates master bakers and can bring you close to that level of quality of bread in your own home. Take the dough temperature and note the ambient temperature as well. Cover.</p>
+        
+        <h2>Bulk Fermentation</h2>
+        <p>You won't like what I have to say here about bulk fermentation, but it is the truth. This will take trial and error and this is where most home bakers give up. Usually what they are getting wrong is one of three things:</p>
+        <ol>
+            <li>They didn't pay any mind to the water temperature and thus the dough temperature</li>
+            <li>Their starter is not yet mature</li>
+            <li>They bought basement brand poor flour and ignored the date on the bag</li>
+        </ol>
+        <p>My sweet spot is 78°F dough temperature and 76°F ambient temperature. But these conditions can vary and change throughout the year. Humid kitchens versus dry kitchens will also impact timing.</p>
+        <p>So for your first loaves, you're just going to have to benchmark and adjust. I once got so frustrated with underproofed results that I prepared a batch of four loaves and spaced out their bulk fermentation times by 20 minutes.</p>
+        <p>My typical bulk fermentation time in my environment, which is in a warm and humid state in the USA, is 4.75 hours. Stretch and fold three times every 30 minutes for the first 90 minutes of bulk fermentation. This is important to develop dough and redistribute thermal gradients within the dough mass. Fermentation creates heat and heat variation creates differing fermentation rates. This helps build structure and even the thermal distribution.</p>
+        
+        <h2>Preshaping</h2>
+        <p>After the bulk fermentation, remove dough from the covered container onto your preferred work surface. Split in half with your dough knife. Separating each dough mass from each other, lightly flour the top and use a tuck and rotate technique to develop membrane tension in what will form the crust of your loaf.</p>
+        <p>This takes some trial and error to get a feel, however, The Perfect Loaf has the best videos I've seen on technique. Rest uncovered for 30 minutes to allow further strength and elasticity to come to the outer surface of the dough.</p>
+        
+        <h2>Shaping</h2>
+        <p>Prepare your proofing bannetons with a cloth covering and lightly flour. Lightly flour the top of the dough again. Using your dough knife, flip over your dough. Lightly pull and stretch in all four directions. Shape your dough as desired, I typically do one boule and one batard. The envelope technique works well for both boules and batards. Load your banneton seam side up, floured side down, cover, and refrigerate for at least 12 hours and no longer than 18. Anything longer than 18 hours will risk over-proofing the bread.</p>
+        <p>Again, see The Perfect Loaf for techniques as your hydration level matters. This recipe is a moderate hydration dough. Be advised there is much room for your interpretation here. If you find yourself struggling with shaping, lower the hydration of the recipe on your next attempt. You can go as low as completely omitting the Water 2, however, I would include at least 10g to aid with mixing.</p>
+        
+        <h2>Bake</h2>
+        <p>Preheat oven and dutch oven cookware to anywhere between 450°F-500°F. My sweet spot is 475°F (at the moment) though I'll vary this +/-10°F depending on my mood and audience.</p>
+        <p>Bake 25 minutes with lid on and 15 minutes with lid off for a well developed but not too tough crust. For less developed crust, increase lid on time up to 33 minutes with 7-10 minutes lid off. For a very developed crust, 20 minutes lid on and 20 minutes lid off.</p>
+        
+        <h2>Enjoy!</h2>
+        
+        <button class="print-button" onclick="window.print()">Print This Recipe</button>
+    </div>
+</body>
+</html>
