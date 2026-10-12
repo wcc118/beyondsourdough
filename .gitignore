@@ -1,0 +1,3 @@
+# Private business files live in the separate private repo wcc118/beyond-sourdough-business.
+# Some machines clone it nested here as business-plan/. Never publish it with the site.
+/business-plan/

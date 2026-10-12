@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beyond Sourdough | Sourdough with two wild cultures, Marietta GA</title>
+  <meta name="description" content="Naturally leavened sourdough from Marietta, Georgia, raised by a sourdough starter and a raisin yeast water. Weekly bread drops are coming soon. Join the waitlist.">
+  <link rel="canonical" href="https://beyondsourdough.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Beyond Sourdough">
+  <meta property="og:title" content="Beyond Sourdough: sourdough with two wild cultures">
+  <meta property="og:description" content="Weekly bread drops are coming to Marietta, Georgia. Join the waitlist.">
+  <meta property="og:url" content="https://beyondsourdough.com/">
+  <meta property="og:image" content="https://beyondsourdough.com/assets/img/og-1200x630.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Two scored sourdough loaves cooling on a wire rack">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Beyond Sourdough",
+    "url": "https://beyondsourdough.com/",
+    "logo": "https://beyondsourdough.com/assets/img/og-1200x630.jpg",
+    "slogan": "Sourdough with two wild cultures",
+    "areaServed": "Marietta, Georgia",
+    "sameAs": ["https://www.instagram.com/beyond.sourdough/"]
+  }
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZWCERQEYQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PZWCERQEYQ');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/loaves-800.webp" type="image/webp">
+
+  <style>
+    :root {
+      --raisin: #3b2330;
+      --rye: #5a3a44;
+      --crust: #c2843f;
+      --crust-hi: #d69a55;
+      --flour: #f3ede4;
+      --crumb: #d9bf9c;
+      --serif: "Young Serif", Georgia, "Times New Roman", serif;
+      --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--raisin);
+      color: var(--flour);
+      font-family: var(--sans);
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--crust-hi); outline-offset: 3px; border-radius: 4px; }
+
+    .page { display: grid; min-height: 100vh; min-height: 100svh; }
+
+    .photo { margin: 0; position: relative; height: 62svh; min-height: 340px; max-height: 620px; overflow: hidden; }
+    .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
+
+    .content {
+      padding: 2.25rem 1.25rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      max-width: 40rem;
+    }
+
+    .brand {
+      font-family: var(--serif);
+      font-size: 1.125rem;
+      color: var(--crumb);
+      margin: 0;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(2.6rem, 11vw, 4.5rem);
+      line-height: 1.02;
+      letter-spacing: -0.015em;
+      margin: 0.5rem 0 1rem;
+      text-wrap: balance;
+    }
+
+    .lede { margin: 0; max-width: 34rem; color: var(--flour); }
+
+    .cultures {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-top: 1px solid var(--rye);
+      border-bottom: 1px solid var(--rye);
+    }
+    .culture { padding: 1.25rem 1rem 1.25rem 0; }
+    .culture + .culture { padding-left: 1rem; border-left: 1px solid var(--rye); }
+    .culture h2 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 1.2;
+      margin: 0 0 0.5rem;
+    }
+    .culture p { margin: 0; font-size: 0.95rem; line-height: 1.55; color: var(--crumb); }
+
+    .waitlist h2 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 1.15;
+      margin: 0 0 0.5rem;
+    }
+    .waitlist p { margin: 0 0 1.25rem; color: var(--crumb); }
+
+    .button {
+      display: inline-block;
+      background: var(--crust);
+      color: var(--raisin);
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.95rem 1.4rem;
+      border-radius: 999px;
+      transition: background-color 0.15s ease;
+    }
+    .button:hover { background: var(--crust-hi); }
+    .note { margin-top: 0.85rem !important; font-size: 0.9rem; }
+
+
+    .waitlist form { display: grid; gap: 1rem; margin: 0 0 1rem; max-width: 26rem; }
+    .field { display: grid; gap: 0.35rem; }
+    .field label { font-size: 0.9rem; font-weight: 500; color: var(--crumb); }
+    .field input, .field select {
+      width: 100%;
+      font: inherit;
+      font-size: 1rem;
+      color: var(--flour);
+      background: var(--raisin);
+      border: 1px solid var(--crumb);
+      border-radius: 10px;
+      padding: 0.7rem 0.85rem;
+      min-height: 2.9rem;
+    }
+    .field input:focus-visible, .field select:focus-visible { outline: 3px solid var(--crust-hi); outline-offset: 2px; }
+    .trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+    .consent { display: grid; grid-template-columns: auto 1fr; gap: 0.75rem; align-items: start; font-size: 0.9rem; color: var(--crumb); }
+    .consent input { width: 1.25rem; height: 1.25rem; margin: 0.15rem 0 0; accent-color: var(--crust); }
+    .status { min-height: 1.4em; margin: 0 !important; font-size: 0.95rem; color: var(--crust-hi) !important; }
+    button.button { border: 0; font: inherit; font-weight: 600; cursor: pointer; justify-self: start; }
+    button.button[disabled] { opacity: 0.6; cursor: progress; }
+    .done h3 { font-family: var(--serif); font-weight: 400; font-size: 1.4rem; margin: 0 0 0.35rem; }
+    .done p { margin: 0 0 1.25rem; }
+    .note a { color: var(--crust-hi); }
+
+    footer {
+      margin-top: auto;
+      font-size: 0.875rem;
+      color: var(--crumb);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+    }
+    footer p { margin: 0; }
+
+    @media (min-width: 900px) {
+      .page { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+      .photo { height: 100vh; height: 100svh; max-height: none; position: sticky; top: 0; }
+      .content { padding: 3rem 4rem 2rem; justify-content: center; gap: 2.25rem; }
+    }
+
+    @media (max-width: 380px) {
+      .cultures { grid-template-columns: 1fr; }
+      .culture { padding-right: 0; }
+      .culture + .culture { padding-left: 0; border-left: 0; border-top: 1px solid var(--rye); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <figure class="photo">
+      <picture>
+        <source type="image/webp" srcset="assets/img/loaves-800.webp 800w, assets/img/loaves-1400.webp 1400w" sizes="(min-width: 900px) 50vw, 100vw">
+        <img src="assets/img/loaves-800.jpg" srcset="assets/img/loaves-800.jpg 800w, assets/img/loaves-1400.jpg 1400w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="1067" alt="Two scored sourdough loaves with deep brown crusts, cooling on a wire rack">
+      </picture>
+    </figure>
+
+    <main class="content">
+      <header>
+        <p class="brand">Beyond Sourdough</p>
+        <h1>Sourdough with two wild cultures</h1>
+        <p class="lede">Naturally leavened bread from Marietta, Georgia, raised by a sourdough starter and a raisin yeast water working together.</p>
+      </header>
+
+      <section class="cultures" aria-label="The two cultures">
+        <div class="culture">
+          <h2>The starter</h2>
+          <p>Fed on white and stone-ground wheat. It brings the tang and the structure.</p>
+        </div>
+        <div class="culture">
+          <h2>The raisin yeast water</h2>
+          <p>Raisins steeped until they ferment, adding a second wild yeast. No raisins end up in the bread.</p>
+        </div>
+      </section>
+
+      <section class="waitlist" aria-labelledby="waitlist-heading">
+        <h2 id="waitlist-heading">Weekly bread drops are coming to Marietta</h2>
+        <p>Join the waitlist to hear first when preorders open. Joining is not an order and costs nothing.</p>
+
+        <form id="waitlist-form" novalidate>
+          <div class="field">
+            <label for="wl-name">First name</label>
+            <input id="wl-name" name="name" type="text" autocomplete="given-name" maxlength="60" required>
+          </div>
+          <div class="field">
+            <label for="wl-email">Email</label>
+            <input id="wl-email" name="email" type="email" autocomplete="email" maxlength="120" required>
+          </div>
+          <div class="field">
+            <label for="wl-zip">ZIP code</label>
+            <input id="wl-zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}" maxlength="5" required>
+          </div>
+          <div class="field">
+            <label for="wl-fulfillment">How would you like to get your bread?</label>
+            <select id="wl-fulfillment" name="fulfillment" required>
+              <option value="" selected disabled>Choose one</option>
+              <option>Pickup</option>
+              <option>Delivery</option>
+              <option>Either</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="wl-frequency">How often would you buy a loaf?</label>
+            <select id="wl-frequency" name="frequency" required>
+              <option value="" selected disabled>Choose one</option>
+              <option>Every week</option>
+              <option>Every two weeks</option>
+              <option>Once a month</option>
+              <option>Now and then</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="wl-source">How did you find us?</label>
+            <select id="wl-source" name="source">
+              <option value="" selected>Choose one</option>
+              <option>Instagram</option>
+              <option>A friend</option>
+              <option>A market or event</option>
+              <option>Search</option>
+              <option>Somewhere else</option>
+            </select>
+          </div>
+          <div class="field trap" aria-hidden="true">
+            <label for="wl-website">Leave this field empty</label>
+            <input id="wl-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <label class="consent" for="wl-consent">
+            <input id="wl-consent" name="consent" type="checkbox" value="yes" required>
+            <span>Email me about Beyond Sourdough bread. Reply STOP at any time to be removed.</span>
+          </label>
+          <p id="wl-status" class="status" role="status" aria-live="polite"></p>
+          <button class="button" id="wl-submit" type="submit">Join the waitlist</button>
+        </form>
+
+        <div id="wl-done" class="done" hidden>
+          <h3>You're on the list.</h3>
+          <p>Check your inbox for a confirmation. If you don't see it, look in spam.</p>
+        </div>
+
+        <p class="note">Prefer Instagram? <a href="https://ig.me/m/beyond.sourdough">Message @beyond.sourdough</a> and we'll send you the sign-up link.</p>
+      </section>
+
+      <footer>
+        <p>&copy; 2026 Beyond Sourdough, Marietta, Georgia</p>
+        <p><a href="https://www.instagram.com/beyond.sourdough/">Instagram @beyond.sourdough</a></p>
+      </footer>
+    </main>
+  </div>
+  <script>
+    (function () {
+      var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxf4uB-HuKwk-2lOaOXJO8SmXfNHYtda933Av9b5BlF6bRKdQUksKLwOV0bZFsF_mFU/exec';
+      var PREVIEW = false;
+      var form = document.getElementById('waitlist-form');
+      var done = document.getElementById('wl-done');
+      var status = document.getElementById('wl-status');
+      var button = document.getElementById('wl-submit');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        status.textContent = '';
+        var email = form.email.value.trim();
+        if (!document.getElementById('wl-name').value.trim()) { status.textContent = 'Enter your first name.'; document.getElementById('wl-name').focus(); return; }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { status.textContent = 'Enter a valid email address.'; form.email.focus(); return; }
+        if (!/^\d{5}$/.test(form.zip.value.trim())) { status.textContent = 'Enter a 5-digit ZIP code.'; form.zip.focus(); return; }
+        if (!form.fulfillment.value) { status.textContent = 'Choose pickup, delivery or either.'; form.fulfillment.focus(); return; }
+        if (!form.frequency.value) { status.textContent = 'Choose how often you would buy a loaf.'; form.frequency.focus(); return; }
+        if (!form.consent.checked) { status.textContent = 'Check the box to agree to get emails.'; form.consent.focus(); return; }
+
+        function finish() {
+          form.hidden = true;
+          done.hidden = false;
+          if (window.gtag) { gtag('event', 'generate_lead'); }
+        }
+        if (PREVIEW) { finish(); return; }
+        if (ENDPOINT.indexOf('https://') !== 0) { status.textContent = 'Sign-up is not connected yet. Message us on Instagram instead.'; return; }
+
+        button.disabled = true;
+        button.textContent = 'Joining...';
+        fetch(ENDPOINT, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(form)) })
+          .then(finish)
+          .catch(function () {
+            status.textContent = 'That did not go through. Check your connection and try again.';
+            button.disabled = false;
+            button.textContent = 'Join the waitlist';
+          });
+      });
+    })();
+  </script>
+</body>
+</html>
