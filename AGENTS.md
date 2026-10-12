@@ -14,6 +14,7 @@ Coming-soon page (October 2026). The original blog site is archived in the priva
 index.html        Coming-soon page (waitlist + Instagram)
 404.html          Not-found page (old recipe URLs land here)
 assets/img/       Web-ready images only
+favicon.svg, favicon-32.png, favicon.ico, apple-touch-icon.png   Tab and home-screen icons (scored loaf on raisin)
 CNAME             beyondsourdough.com
 robots.txt
 sitemap.xml       List every public page
