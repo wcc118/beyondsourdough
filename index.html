@@ -332,14 +332,22 @@
         if (PREVIEW) { finish(); return; }
         if (ENDPOINT.indexOf('https://') !== 0) { status.textContent = 'Sign-up is not connected yet. Message us on Instagram instead.'; return; }
 
+        function fail(message) {
+          status.textContent = message;
+          button.disabled = false;
+          button.textContent = 'Join the waitlist';
+        }
+
         button.disabled = true;
         button.textContent = 'Joining...';
-        fetch(ENDPOINT, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(form)) })
-          .then(finish)
+        fetch(ENDPOINT, { method: 'POST', body: new URLSearchParams(new FormData(form)) })
+          .then(function (response) { return response.json(); })
+          .then(function (result) {
+            if (result && result.ok) { finish(); }
+            else { fail('We could not save that. Check your details and try again, or message us on Instagram.'); }
+          })
           .catch(function () {
-            status.textContent = 'That did not go through. Check your connection and try again.';
-            button.disabled = false;
-            button.textContent = 'Join the waitlist';
+            fail('That did not go through. Check your connection and try again.');
           });
       });
     })();
